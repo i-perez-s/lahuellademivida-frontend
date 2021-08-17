@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="firstParagraph">
+            <h3 class="name">{{oil.name}}</h3>
+            <p>{{oil.realName}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-xs-12">
+        <div class="image">
+            <img src="{{url+'oil/getImage/'+ oil.image}}" class="topImage">
+        </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+        <div class="firstParagraph">
+            <span class="utilities">
+        <p> {{oil.shortDescription}} <br> Alguno de sus usos son: <br> </p>
+        <span *ngFor="let use of oil.description">
+          <span *ngIf="use != ''">
+            <p>· {{use}}</p>
+          </span>
+            </span>
+            </span>
+            <button [routerLink]="['/contacto']" class="btn btn-naran">Contacto</button>
+        </div>
+    </div>
+</div>

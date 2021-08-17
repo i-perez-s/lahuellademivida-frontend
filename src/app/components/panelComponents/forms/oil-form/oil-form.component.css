@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Londrina+Solid:wght@300&display=swap');
+
+.fa-arrow-left {
+  font-size: larger;
+}
+
+
+.message{
+	width: 100%;
+	padding: 5px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.failed{
+  background: red;
+  color: white;
+}
+.success{
+	background: green;
+	color: white;
+}
+
+.title{
+  font-family: 'Londrina Solid', cursive;
+}
+
+.label{
+  font-family: 'Finger Paint', cursive;
+}
+
+.longDescription{
+  min-height: 300px;
+  max-height: 400px;
+}
+
+.shortDescription{
+  min-height: 100px;
+  max-height: 100px;
+}

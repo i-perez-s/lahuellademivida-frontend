@@ -1,0 +1,24 @@
+<div class="container mt-3 text-center">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-verdeFuerte w-100" [routerLink] = "['/createOil']">Crear aceite</button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let oil of oils">
+        <th scope="row" class="nameOil">{{oil.name}}</th>
+        <th scope="row"><button class="btn btn-danger" (click)="delete(oil._id)">Delete</button></th>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Finger+Paint&display=swap');
+
+.image{
+	float: left;
+	width: 100%;
+}
+
+.bestCustomers{
+  font-family: 'Concert One', cursive;
+  font-size: larger;
+}
+
+.image img{
+	width: 100%;
+}
+
+.firstParagraph{
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.name{
+  font-family: 'Finger Paint', cursive;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.utilities{
+  text-align: justify;
+}
+
+img{
+  display:block;
+  margin:auto;
+}

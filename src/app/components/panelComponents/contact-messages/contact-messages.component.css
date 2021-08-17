@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.message{
+  border: solid black 2px;
+  width: 100%;
+}
+
+.typeMessage{
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+}

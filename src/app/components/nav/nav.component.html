@@ -1,0 +1,43 @@
+<header>
+
+    <div class="header-content">
+        <div class="logo">
+            <div class="brand-logo">
+                <h1>
+                    <a href="index.html">
+                        <img src="../assets/img/pataNegra.png" width="10%" style="display: inline;">
+                        <p class="text-brand" style="display: inline;">La huella de mi vida</p>
+                        <img src="../assets/img/pataBlanca.png" width="10%" style="display: inline;">
+                    </a>
+                </h1>
+            </div>
+        </div>
+
+        <div class="menu" id="show-menu">
+
+            <nav>
+                <ul>
+                    <li id="menuOption"><a [routerLink]="['/home']" [routerLinkActive]="['text-menu-selected']" (click)="mostrarMenu()"><i class=" fas fa-home"></i>Inicio</a></li>
+                    <li id="menuOption"><a [routerLink]="['/aceites']" [routerLinkActive]="['text-menu-selected']" (click)="mostrarMenu()"><i class=" fas fa-seedling"></i>Aceites</a></li>
+                    <li id="menuOption"><a [routerLink]="['/difusores']" [routerLinkActive]="['text-menu-selected']" (click)="mostrarMenu()"><i class=" fab fa-cloudversify"></i>Difusores</a></li>
+                    <li id="menuOption"><a [routerLink]="['/kits']" [routerLinkActive]="['text-menu-selected']" (click)="mostrarMenu()"><i class=" fas fa-box-open"></i>Kits</a></li>
+                    <li id="menuOption"><a [routerLink]="['/contacto']" [routerLinkActive]="['text-menu-selected']" (click)="mostrarMenu()"><i class=" fas fa-headset"></i>Contacto</a></li>
+                    <div id="ctn-icon-admin">
+                        <i class="fas fa-user-shield" [routerLink]="['/huella']"></i>
+                    </div>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="ctn-icon-search">
+            <i class="fas fa-search" id="icon-search" [routerLink]="['buscar']"></i>
+        </div>
+
+    </div>
+
+    <div id="icon-menu" (click)="mostrarMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+</header>

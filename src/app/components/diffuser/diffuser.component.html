@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="firstParagraph">
+      <h3 class="name">{{diffuser.name}}</h3>
+      <p>{{diffuser.shortDescription}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-xs-12">
+      <div class="">
+        <img src="{{url+'diffuser/getImage/'+ diffuser.image}}" class="topImage">
+      </div>
+    </div>
+</div>
+
+<div class="col-md-12 col-xs-12">
+  <div class="firstParagraph">
+    <p class="utilities">{{diffuser.characteristics}}</p>
+    <button [routerLink]="['/contacto']" class="btn btn-naran">Si te intersa contactanos</button>
+  </div>
+</div>

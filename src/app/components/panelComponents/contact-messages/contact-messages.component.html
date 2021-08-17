@@ -1,0 +1,64 @@
+<div class="container mt-3 text-center">
+  <div class="row mb-5">
+    <div class="col-md-4">
+      <button class="btn btn-amarillo w-100" (click)="changeTypeMessage('dudas')">Dudas</button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-naran w-100" (click)="changeTypeMessage('pedidos')">Pedidos</button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-amarillo2 w-100" (click)="changeTypeMessage('otros')">Otros</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 mb-2">
+      <h2 class="h1 typeMessage">{{typeMessage}}</h2>
+    </div>
+  </div>
+
+  <span [ngSwitch]="typeMessage">
+    <span *ngSwitchCase="'dudas'">
+      <div class="row">
+        <span *ngFor="let doubt of dudas">
+          <div class="message col-md-12 mb-3">
+            <div class="m-2">
+              <h4>{{doubt.name}}</h4>
+              <p>{{doubt.mail}}</p>
+              <p class="text-justify">{{doubt.message}}</p>
+              <button class="text-center d-block w-100 btn btn-danger" (click)="deleteMessage(doubt._id)">Delete</button>
+            </div>
+          </div>
+        </span>
+      </div>
+    </span>
+    <span *ngSwitchCase="'pedidos'">
+      <div class="row">
+        <span *ngFor="let order of pedidos">
+          <div class="message col-md-12 mb-3">
+            <div class="m-2">
+              <h4>{{order.name}}</h4>
+              <p>{{order.mail}}</p>
+              <p class="text-justify">{{order.message}}</p>
+              <button class="text-center d-block w-100 btn btn-danger" (click)="deleteMessage(order._id)">Delete</button>
+            </div>
+          </div>
+        </span>
+      </div>
+    </span>
+    <span *ngSwitchCase="'otros'">
+      <div class="row">
+        <span *ngFor="let other of otros">
+          <div class="message col-md-12 mb-3">
+            <div class="m-2">
+              <h4>{{other.name}}</h4>
+              <p>{{other.mail}}</p>
+              <p class="text-justify">{{other.message}}</p>
+              <button class="text-center d-block w-100 btn btn-danger" (click)="deleteMessage(other._id)">Delete</button>
+            </div>
+          </div>
+        </span>
+      </div>
+    </span>
+  </span>
+</div>

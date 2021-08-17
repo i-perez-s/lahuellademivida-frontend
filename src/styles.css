@@ -1,1 +1,422 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300&display=swap');
+
+:root{
+  --verdeFuerte: #5f9637;
+  --verdeFlojo: #d4e157;
+  --naran: #ffa726;
+  --amarillo2: #ffe082;
+  --amarillo: #ffd54f;
+}
+
+.title{
+  font-family: 'Grandstander', cursive;
+  text-decoration: underline;
+}
+.about{
+  font-family: 'Grandstander', cursive;
+}
+
+a:hover {
+  text-transform: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Grandstander', cursive;
+}
+
+.lineBreaker{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40%;
+}
+
+body{
+  background: #f6f6f6;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 4px 25px -22px black;
+  z-index: 10;
+}
+
+.header-content{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+}
+.logo .brand-logo h1 p{
+  font-size: 15px;
+  padding: 0px;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.menu {
+  height: 80px;
+  margin-right: 60px;
+}
+
+.menu nav{
+  height: 100%;
+}
+
+.menu nav ul{
+  height: 100%;
+  display: flex;
+  list-style: none;
+}
+
+.menu nav ul li{
+  height: 100%;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-selected:before{
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: var(--naran);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu nav ul li a{
+  color: #777777;
+  font-size: 15px;
+  transition: color 300ms;
+  text-decoration: none;
+}
+
+.menu nav ul li a:hover{
+  color: var(--naran);
+}
+
+.menu .text-menu-selected{
+  color: var(--naran);
+  font-size: 20px;
+}
+
+.fa-search:hover{
+  color: var(--naran);
+}
+
+
+
+
+.menu nav ul li a i{
+  display: none;
+}
+
+.text-brand{
+  color: black;
+}
+#icon-menu{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  padding: 10px;
+  font-size: 20px;
+  background: #eeeeeefa;
+  border-radius: 100%;
+  color: #787878;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#icon-menu:hover{
+  opacity: 0.8;
+}
+
+#cover-ctn-search{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 7;
+  display: none;
+}
+
+
+
+/*Buscador de contenido*/
+
+#ctn-icon-admin{
+  position: absolute;
+  right: 40px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ctn-icon-admin i{
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+
+
+#ctn-icon-search{
+  position: absolute;
+  right: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ctn-icon-search i{
+  font-size: 18px;
+  color: #777777;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+#menuOption i{
+  color: var(--verdeFuerte);
+}
+
+
+#ctn-icon-search i:hover{
+  color: var(--naran);
+}
+
+
+#ctn-bars-search{
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  z-index: 9;
+  transition: all 600ms;
+}
+
+#ctn-bars-search input{
+  display: block;
+  width: 1200px;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+  outline: 0;
+}
+
+#blog-container-cover{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 7;
+  display: none;
+}
+
+.blog-container-cover{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-top: 80px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blog-container-cover:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+/*footer*/
+.container-footer{
+  width: 100%;
+  padding: 40px 0;
+  background: #f1b533;
+  margin-top: 40px;
+}
+
+.container-footer footer .redes-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.container-footer footer .redes-footer .icon-redes-footer{
+  font-size: 20px;
+  margin: 20px;
+  background: #efefef;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  color: #a2a2a2;
+}
+
+a:link, a:visited, a:active a:hover {
+  text-decoration:none;
+}
+
+footer .redes-footer .fa-envelope:hover{
+  background: #DE4C34;
+  color: #fff;
+}
+
+footer .redes-footer .fa-instagram:hover{
+  background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+  color: #fff;
+}
+
+
+.container-footer footer hr{
+  margin-top: 20px;
+  border: none;
+  height: 4px;
+  background: #d19e30;
+}
+
+
+.container-footer h5{
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Zilla Slab', serif;
+
+}
+.clear{
+	position: relative;
+  margin-top: 80px;
+}
+
+/* Responsive Design - adaptable a dispositivos moviles*/
+
+@media screen and (max-width: 1220px){
+
+  .header-content,
+  .container-footer footer{
+      max-width: 1000px;
+      padding: 0 20px;
+  }
+
+  #ctn-bars-search,
+  #ctn-bars-search input,
+  #box-search{
+      width: 100%;
+  }
+
+}
+
+
+
+@media screen and (max-width: 800px){
+
+  body{
+      overflow-x: hidden;
+  }
+
+
+  #icon-menu{
+      display: flex;
+      right: 60px;
+  }
+
+  .container-all{
+      transition: all 300ms cubic-bezier(1,0,0,1);
+  }
+
+  .move-container-all{
+      transform: translateX(300px);
+  }
+
+  .menu{
+      width: 0px;
+      height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      background: #fff;
+      overflow: hidden;
+      transform: translateX(-350px);
+      box-shadow: 10px 0 20px -25px black;
+      transition: all 300ms cubic-bezier(1,0,0,1);
+  }
+
+  .show-lateral {
+      width: 300px;
+      transform: translateX(0px);
+  }
+
+  .menu nav ul {
+      flex-direction: column;
+  }
+
+  .menu nav ul li{
+      max-width: 200px;
+      height: 50px;
+      justify-content: flex-start;
+  }
+
+  .menu-selected:before{
+      width: 0;
+  }
+
+  .menu nav ul li a{
+      margin-top: 40px;
+      color: #858585;
+  }
+
+  .menu nav ul li a i{
+      width: 20px;
+      display: inline-block;
+      margin-right: 10px;
+      color: #46a2fd;
+  }
+
+
+
+  .container-aside{
+      flex-wrap: wrap;
+  }
+
+
+}

@@ -1,0 +1,60 @@
+<button class="btn" [routerLink] = "['/huellaPanel']"><i class="fas fa-arrow-left fa-4x"></i></button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="container" *ngIf="kit">
+        <h2 class="h1 text-center title">{{title}}</h2>
+        <div class="message success text-center" *ngIf="status == 'success'">
+          El kit se ha creado correctamente
+        </div>
+
+        <div class="message failed text-center" *ngIf="status == 'failed'">
+          El kit NO SE HA PODIDO CREAR
+        </div>
+
+        <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+          <p>
+            <span class="form-group">
+              <label for="name" class="label">Nombre:</label>
+              <input class="form-control" type="text" name="name" #name="ngModel" [(ngModel)]="kit.name" required />
+              <span *ngIf="name.touched && !name.valid">
+                El nombre es obligatorio
+              </span>
+            </span>
+          </p>
+
+          <p>
+            <span class="form-group">
+              <label for="category" class="label">Descripcion</label>
+              <textarea class="form-control shortDescription" type="text" name="category" #category="ngModel" [(ngModel)]="kit.bestCustomers" required ></textarea>
+              <span *ngIf="category.touched && !category.valid">
+                La descripción és obligatoria
+              </span>
+            </span>
+          </p>
+
+          <p>
+            <span class="form-group">
+              <label for="description" class="label">Contenido:</label>
+              <textarea class="form-control longDescription" type="text"  name="description" #description="ngModel" [(ngModel)]="kit.content" required></textarea>
+              <span *ngIf="description.touched && !description.valid">
+                El contenido es obligatorio es obligatorio
+              </span>
+            </span>
+          </p>
+
+
+
+          <label for="image">Imagen del proyecto</label> <br>
+          <input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/> <br> <br>
+          <span class="image" *ngIf="kit.image">
+            <img src="{{url+'kit/getImage/'+ kit.image}}" class="w-50"/>
+          </span>
+
+          <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid" class="btn btn-info w-100 mt-4 mb-3" [style.cursor]="!projectForm.form.valid ? 'no-drop': 'pointer'" /></form>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  </button>
+  <div class="navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link a" (click)="nav('contact')">Contacto</a>
+      <a class="nav-link a" (click)="nav('oils')">Aceites</a>
+      <a class="nav-link a" (click)="nav('kits')">Kits</a>
+      <a class="nav-link a" (click)="nav('diffusers')">Difusores</a>
+    </div>
+    <div class="navbar-nav ml-auto">
+      <a class="nav-link a mr-sm-2" (click)="logout()">Cerrar sesión</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <span [ngSwitch]="navbarLink">
+    <span *ngSwitchCase="'contact'">
+      <contact></contact>
+    </span>
+    <span *ngSwitchCase="'oils'">
+      <oil></oil>
+    </span>
+    <span *ngSwitchCase="'kits'">
+      <kit></kit>
+    </span>
+    <span *ngSwitchCase="'diffusers'">
+      <diffuser></diffuser>
+    </span>
+  </span>
+</div>
+

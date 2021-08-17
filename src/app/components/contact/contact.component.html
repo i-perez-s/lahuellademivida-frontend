@@ -1,0 +1,53 @@
+<div class="back">
+
+
+  <form #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
+    <h2>Contacto</h2>
+
+    <input type="text" name="name" placeholder="Nombre:" #name="ngModel" [(ngModel)]="message.name" required/>
+    <span class="formulario__input-error" *ngIf="name.touched && !name.valid">
+      El nombre es obligatorio
+    </span>
+
+
+    <input name="description" placeholder="Email:" #description="ngModel" [(ngModel)]="message.mail" required type="email"/>
+    <span class="formulario__input-error" *ngIf="description.touched && !description.valid">
+      Introduce un email valido
+    </span>
+
+
+    <textarea name="" id="inputMensaje" placeholder="Mensaje:" cols="30" rows="10" name="category" #category="ngModel" [(ngModel)]="message.message" required></textarea>
+    <span id="error-mensaje" class="formulario__input-error" *ngIf="category.touched && !category.valid">
+      El mensaje es obligatorio
+    </span><br>
+
+
+    <label class="contain"><span class="option">Dudas</span>
+      <input type="radio" name="dudas" value="dudas" #dudas="ngModel" [(ngModel)]="message.category" required>
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="contain"><span class="option">Pedidos</span>
+      <input type="radio" name="pedido" value="pedido" #pedido="ngModel" [(ngModel)]="message.category" required >
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="contain"><span class="option">Otros</span>
+      <input type="radio" name="otros" value="otros" #otros="ngModel" [(ngModel)]="message.category" required>
+      <span class="checkmark"></span>
+    </label>
+
+    <div class="message success" *ngIf="status == 'success'">
+      Mensaje enviado correctamente
+    </div>
+
+    <div class="message failed" *ngIf="status == 'failed'">
+      Ha habido un problema con tu mensaje
+    </div>
+
+    <input type="submit" value="Enviar" id="boton" [disabled]="!messageForm.form.valid" [style.cursor]="!messageForm.form.valid ? 'no-drop': 'pointer'" />
+  </form>
+
+  <app-foot></app-foot>
+</div>
+

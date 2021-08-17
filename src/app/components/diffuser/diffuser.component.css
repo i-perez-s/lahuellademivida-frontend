@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+.image{
+	float: left;
+	width: 100%;
+}
+
+.image img{
+	width: 100%;
+}
+
+.firstParagraph{
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.name{
+  font-family: 'Finger Paint', cursive;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.utilities{
+  text-align: justify;
+}
+
+img{
+  display:block;
+  margin:auto;
+}
